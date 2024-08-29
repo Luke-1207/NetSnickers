@@ -5,44 +5,26 @@ server:
     persistent: true
 
 spring:
-#  mail:
-#    host: ${HOST_MAIL}
-#    port: ${PORT_MAIL}
-#    protocol: smtp
-#    username: ${USERNAME_MAIL}
-#    password: ${PASSWORD_MAIL}
-#    encoding: UTF-8
-#    from:
-#      enabled: true
-#      defaultsender: ${SENDER_MAIL}
-#    smtps:
-#      auth: true
-#      starttls:
-#        enable: true
-#    properties:
-#      mail:
-#        debug: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${BD_USER}
     password: ${BD_PASSWORD}
     url: ${BD_JDBC_URL}
-#    hikari:
-#      connection-init-sql: SELECT 1 FROM DUAL
-#      connection-test-query: SELECT 1 FROM DUAL
-#      connection-timeout: 600000
-#      idle-timeout: 600000
-#      leak-detection-threshold: 500000
-#      max-lifetime: 1800000
-#      maximum-pool-size: ${MAX_POOL_SIZE:2}
-#      validation-timeout: 5000
+    hikari:
+      connection-init-sql: SELECT 1
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 10
+      validation-timeout: 5000
+
   jpa:
-    generate-ddl: true
     hibernate:
       ddl-auto: update #validate
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.MySQL8Dialect  # Use MySQL8Dialect para MySQL 8.x
         format_sql: true
 
 app:

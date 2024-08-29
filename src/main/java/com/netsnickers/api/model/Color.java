@@ -19,7 +19,7 @@ public class Color {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idColor;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "nome", nullable = false)

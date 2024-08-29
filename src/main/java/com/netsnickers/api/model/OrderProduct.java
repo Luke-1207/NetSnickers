@@ -15,15 +15,15 @@ import lombok.Setter;
 public class OrderProduct {
 
     @EmbeddedId
-    private OrderProductId id;
+    private OrderProductId idOrderProduct;
 
     @ManyToOne
-    @MapsId("orderId")
+    @MapsId("idOrder")
     @JoinColumn(name = "pedido_id")
     private Order order;
 
     @ManyToOne
-    @MapsId("productId")
+    @MapsId("idProduct")
     @JoinColumn(name = "produto_id")
     private Product product;
 

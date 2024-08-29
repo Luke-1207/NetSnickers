@@ -12,6 +12,6 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @Embeddable
 public class OrderProductId implements Serializable {
-    private Long orderId;
-    private Long productId;
+    private Long idOrder;
+    private Long idProduct;
 }

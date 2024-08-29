@@ -16,7 +16,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idProduct;
 
     @Column(name = "nome", nullable = false, length = 100)
     private String name;
@@ -34,15 +34,15 @@ public class Product {
     private Long quantity;
 
     @ManyToOne
-    @JoinColumn(name = "categoria_id", referencedColumnName = "id")
+    @JoinColumn(name = "categoria_id", referencedColumnName = "idCategory")
     private Category category;
 
     @ManyToOne
-    @JoinColumn(name = "cor_id", referencedColumnName = "id")
+    @JoinColumn(name = "cor_id", referencedColumnName = "idColor")
     private Color color;
 
     @ManyToOne
-    @JoinColumn(name = "marca_id", referencedColumnName = "id")
+    @JoinColumn(name = "marca_id", referencedColumnName = "idBrand")
     private Brand brand;
 
 }

@@ -18,7 +18,7 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idOrder;
 
     @Column(name = "frete", nullable = false)
     private Float freight;
@@ -27,11 +27,11 @@ public class Order {
     private Float totalValue;
 
     @ManyToOne
-    @JoinColumn(name = "usuario_id", referencedColumnName = "id")
+    @JoinColumn(name = "usuario_id", referencedColumnName = "idUser")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "forma_pagamento_id", referencedColumnName = "id")
+    @JoinColumn(name = "forma_pagamento_id", referencedColumnName = "idPaymentMethod")
     private PaymentMethod paymentMethod;
 
     @OneToMany(mappedBy = "order")

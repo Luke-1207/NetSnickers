@@ -16,7 +16,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idUser;
 
     @Column(name = "nome", nullable = false, length = 100)
     private String name;
@@ -37,7 +37,7 @@ public class User {
     private String cep;
 
     @ManyToOne
-    @JoinColumn(name = "perfil_id", referencedColumnName = "id")
+    @JoinColumn(name = "perfil_id", referencedColumnName = "idProfile")
     private Profile profile;
 
 }

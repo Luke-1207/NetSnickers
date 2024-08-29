@@ -17,7 +17,7 @@ public class PaymentMethod {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idPaymentMethod;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "nome", nullable = false)
