@@ -18,6 +18,6 @@ public class UserDTO {
     private String email;
     private String address;
     private String cep;
-    private Long idProfile;
+    private ProfileDTO profile;
 
 }

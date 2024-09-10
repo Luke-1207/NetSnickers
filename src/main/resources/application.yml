@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${BD_USER}
     password: ${BD_PASSWORD}
-    url: ${BD_JDBC_URL}
+    url: ${BD_URL}
     hikari:
       connection-init-sql: SELECT 1
       connection-test-query: SELECT 1
