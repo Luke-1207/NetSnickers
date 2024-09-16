@@ -20,5 +20,6 @@ public class UserDTO {
     private String address;
     private String cep;
     private ProfileDTO profile;
+    private String urlPhoto;
 
 }
