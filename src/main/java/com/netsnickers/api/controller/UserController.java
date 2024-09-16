@@ -2,6 +2,7 @@ package com.netsnickers.api.controller;
 
 import com.netsnickers.api.dto.UserDTO;
 import com.netsnickers.api.service.UserService;
+import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,11 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @PostMapping("{email}/{password}")
+    public ResponseEntity<Boolean> login(@PathParam("email") String email, @PathParam("password") String password) {
+        return ResponseEntity.ok(userService.login(email, password));
+    }
 
     @PostMapping()
     public ResponseEntity<Boolean> create(@RequestBody UserDTO user){

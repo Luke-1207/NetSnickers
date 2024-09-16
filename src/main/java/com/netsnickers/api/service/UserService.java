@@ -22,6 +22,15 @@ public class UserService {
     @Autowired
     private ProfileRepository profileRepository;
 
+    public Boolean login(String email, String password){
+        User user = userRepository.findByEmail(email);
+
+        if(user.getPassword().equals(password)){
+            return true;
+        }
+        return false;
+    }
+
     public Boolean create(UserDTO userDTO) {
         Profile profile = profileRepository.getReferenceById(userDTO.getProfile().getIdProfile());
         User user = UserMapper.convertToEntity(userDTO, User.class);

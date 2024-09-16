@@ -30,6 +30,9 @@ public class User {
     @Column(name = "email", nullable = false, unique = true, length = 100)
     private String email;
 
+    @Column(name = "senha", nullable = false, length = 100)
+    private String password;
+
     @Column(name = "endereco", nullable = false, unique = true, length = 255)
     private String address;
 
