@@ -45,4 +45,7 @@ public class Product {
     @JoinColumn(name = "marca_id", referencedColumnName = "idBrand")
     private Brand brand;
 
+    @Column(name = "url_foto")
+    private String urlPhoto;
+
 }

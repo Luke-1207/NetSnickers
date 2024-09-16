@@ -20,5 +20,6 @@ public class ProductDTO {
     private CategoryDTO category;
     private ColorDTO color;
     private BrandDTO brand;
+    private String urlPhoto;
 
 }

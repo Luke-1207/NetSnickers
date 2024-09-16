@@ -43,7 +43,4 @@ public class User {
     @JoinColumn(name = "perfil_id", referencedColumnName = "idProfile")
     private Profile profile;
 
-    @Column(name = "url_foto")
-    private String urlPhoto;
-
 }
